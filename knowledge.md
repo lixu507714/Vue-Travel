@@ -20,3 +20,9 @@ css
 stylus 快速编写css；
 在style 里面引用样式，需要蛀牙要用@import。
 
+
+
+swiper  插件
+vue-awesome-swiper,适用于vue的轮播图。
+https://github.com/surmon-china/vue-awesome-swiper.
+

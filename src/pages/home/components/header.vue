@@ -41,6 +41,7 @@ export default {
     border-radius: 0.1rem;
     background: #ffffff;
     padding-left: 0.2rem;
+    margin-bottom: 0.12rem;
   }
 
   .header-right {
