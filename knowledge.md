@@ -11,3 +11,12 @@
 兼容问题：
 1、像素边框的问题。（不同分辨率的手机会出现的问题）
 2、300毫秒点击延迟。添加一个第三方文件。fastclick包.fastClick.attach(document.body)
+
+
+
+
+
+css
+stylus 快速编写css；
+在style 里面引用样式，需要蛀牙要用@import。
+
