@@ -26,3 +26,10 @@ swiper  插件
 vue-awesome-swiper,适用于vue的轮播图。
 https://github.com/surmon-china/vue-awesome-swiper.
 
+
+vue 插件
+vue.devtools
+
+文件上传的格式
+https://blog.csdn.net/xiaoranzhizhu/article/details/70473734
+
