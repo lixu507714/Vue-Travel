@@ -33,3 +33,6 @@ vue.devtools
 文件上传的格式
 https://blog.csdn.net/xiaoranzhizhu/article/details/70473734
 
+
+
+axios 返回的结果是一个promise对象
