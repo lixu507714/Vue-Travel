@@ -36,3 +36,6 @@ https://blog.csdn.net/xiaoranzhizhu/article/details/70473734
 
 
 axios 返回的结果是一个promise对象
+
+
+better-scroll 使用字母的布局
