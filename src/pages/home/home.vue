@@ -21,7 +21,9 @@ export default {
   methods: {
     getHomeInfo () {
       axios.get('/api/index.json')
-        .then(this.getHomeInfoSuss)
+        .then((res) => {
+          console.log(res)
+        }).catch()
     },
     getHomeInfoSuss (res) {
       console.log(res)
