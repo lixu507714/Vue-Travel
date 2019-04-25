@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(cityItem, key) of cities" :key="key">
+      <div class="area" v-for="(cityItem, key) of cities" :key="key" :ref="key">
         <div class="title border-top-bottom">{{key}}</div>
         <div class="item-list">
           <div class="item border-bottom" v-for="innerItems of cityItem" :key="innerItems.id">
@@ -30,6 +30,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -39,10 +40,21 @@ export default {
   name: 'cityList',
   props: {
     cities: Object,
-    hotCities: Array
+    hotCities: Array,
+    changeCity: String
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  watch: {
+    // 这时候用到贞听器，去监听changeCity的变化。
+    changeCity () {
+      if (this.changeCity) {
+        console.log(this.changeCity)
+        const element = this.$refs[this.changeCity][0]
+        this.scroll.scrollToElement(element) //  TODO  没有滚动到顶部，还未知原因。
+      }
+    }
   }
 }
 </script>
