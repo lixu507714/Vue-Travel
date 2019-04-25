@@ -39,3 +39,4 @@ axios 返回的结果是一个promise对象
 
 
 better-scroll 使用字母的布局
+https://github.com/ustbhuangyi/better-scroll
