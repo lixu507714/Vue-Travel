@@ -20,8 +20,13 @@ export default {
   },
   data () {
     return {
-      touchStatus: false
+      touchStatus: false,
+      startY: 0,
+      timer: 0
     }
+  },
+  updated () { // s生命周期钩子   当页面的数据被更新的时候
+    this.startY = this.$refs['A'][0].offsetTop
   },
   computed: {
     changeCity () {
@@ -40,14 +45,19 @@ export default {
       this.touchStatus = true
     },
     handleTouchMove (e) {
-      if (this.touchStatus) { // TODO 计算元素到顶部的高度，手指移动的高度以及字母所在的位置。
-        const startY = this.$refs['A'][0].offsetTop
-        const touchY = e.touches[0].clientY - 79
-        const index = Math.floor((touchY - startY) / 20)
-        console.log(index)
-        if (index >= 0 && index < this.changeCity.length) {
-          this.$emit('change', this.changeCity[index])
-        }
+      if (this.timer) {
+        clearTimeout()
+      } else {
+        setTimeout(() => {
+          if (this.touchStatus) { // TODO 计算元素到顶部的高度，手指移动的高度以及字母所在的位置。 视频 8-6
+            const touchY = e.touches[0].clientY - 79
+            const index = Math.floor((touchY - this.startY) / 20)
+            console.log(index)
+            if (index >= 0 && index < this.changeCity.length) {
+              this.$emit('change', this.changeCity[index])
+            }
+          }
+        }, 16)
       }
     },
     handleTouchEnd () {
