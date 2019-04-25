@@ -46,7 +46,7 @@ export default {
     },
     handleTouchMove (e) {
       if (this.timer) {
-        clearTimeout()
+        clearTimeout(this.timer)
       } else {
         setTimeout(() => {
           if (this.touchStatus) { // TODO 计算元素到顶部的高度，手指移动的高度以及字母所在的位置。 视频 8-6
