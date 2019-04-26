@@ -6,6 +6,24 @@
      </div>
       <p class="icon-desc">景点门票</p>
     </div>
+    <div class="icon">
+      <div class="icon-img">
+        <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png">
+      </div>
+      <p class="icon-desc">景点门票</p>
+    </div>
+    <div class="icon">
+      <div class="icon-img">
+        <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png">
+      </div>
+      <p class="icon-desc">景点门票</p>
+    </div>
+    <div class="icon">
+      <div class="icon-img">
+        <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png">
+      </div>
+      <p class="icon-desc">景点门票</p>
+    </div>
   </div>
 </template>
 
