@@ -1,0 +1,10 @@
+@charset "utf-8";
+$remBase: 750;
+
+@function vwSize($size) {
+  @return $size * 100vw * 1.0 / $remBase;
+}
+
+@function vhSize($size) {
+  @return vwSize($size);
+}

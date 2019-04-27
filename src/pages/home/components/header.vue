@@ -1,5 +1,6 @@
 <template>
   <div class="header">
+    <p>ssdkjskj</p>
     <div class="header-left">
       <div class="iconfont back-icon">&#xe624;</div>
     </div>
@@ -21,15 +22,16 @@ export default {
   name: 'HomeHeader'
 }
 </script>
-<style lang="stylus" scoped>
-/*@import "../../../assets/styles/main.scss";*/
-@import "../../../assets/styles/main.styl";
-/*@import "～@/assets/styles/main.styl";    @ 代表src目录*/
+<style lang="scss">
+  @import "../../../assets/styles/function/function";
 .header{
   display: flex;
-  line-height: $headerHeight;
-  background: $bgColor;
   color: #fff;
+   p {
+    color:#ccc;
+     background-color: red;
+     width: vwSize(100);
+  }
 }
   .header-left {
     width: 0.64rem;
@@ -59,7 +61,7 @@ export default {
   }
 
   .back-icon {
-    text-align center;
+    text-align: center;
     font-size:0.4rem;
   }
 
