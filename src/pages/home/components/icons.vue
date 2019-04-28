@@ -28,10 +28,10 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomeIcons',
-    data () {
-      return {
+export default {
+  name: 'HomeIcons',
+  data () {
+    return {
       //   swiperOption: {
       //     pagination: '.swiper-pagination',
       //     loop: true
@@ -43,9 +43,9 @@
       //     id: 2,
       //     img: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2263276031,4133146447&fm=26&gp=0.jpg'
       //   }]
-      }
     }
   }
+}
 </script>
 <!--.wrapper {-->
 <!--overflow :hidden;-->
