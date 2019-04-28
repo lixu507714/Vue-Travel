@@ -5,7 +5,10 @@
     </div>
     <div class="search-content" v-show="value" ref="search">
       <ul class="search-ul">
-        <li class="search-item border-bottom" v-for="item of list" :key="item">{{item.name}}</li>
+        <li class="search-item border-bottom"
+            v-for="item of list" :key="item"
+            @click="handleCityClick(item)"
+        >{{item.name}}</li>
         <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
       </ul>
     </div>
@@ -24,6 +27,11 @@ export default {
       value: '',
       list: [],
       timer: null
+    }
+  },
+  methods: {
+    handleCityClick (item) {
+      this.$store.dispatch('changeCity', item.name) // 派发一个名字叫changeCity的action。然后吧item.name查 u 能过去。
     }
   },
   computed: {

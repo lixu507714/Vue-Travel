@@ -6,7 +6,7 @@
         <div class="button-list">
           <div class="button-wrapper">
             <div class="button">
-              北京
+             {{this.$store.state.city}}
             </div>
           </div>
         </div>
@@ -14,7 +14,11 @@
       <div class="area">
         <div class="title border-top-bottom">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper" v-for="item of hotCities" :key="item.id">
+          <div class="button-wrapper"
+               v-for="item of hotCities"
+               :key="item.id"
+               @click="handleCityClick(item)"
+          >
             <div class="button">
               {{item.name}}
             </div>
@@ -24,7 +28,10 @@
       <div class="area" v-for="(cityItem, key) of cities" :key="key" :ref="key">
         <div class="title border-top-bottom">{{key}}</div>
         <div class="item-list">
-          <div class="item border-bottom" v-for="innerItems of cityItem" :key="innerItems.id">
+          <div class="item border-bottom"
+               v-for="innerItems of cityItem"
+               :key="innerItems.id"
+               @click="handleCityClick(innerItems)">
             {{innerItems.name}}
           </div>
         </div>
@@ -54,6 +61,12 @@ export default {
         const element = this.$refs[this.changeCity][0]
         this.scroll.scrollToElement(element) //  TODO  没有滚动到顶部，还未知原因。
       }
+    }
+  },
+  methods: {
+    handleCityClick (item) {
+      this.$store.dispatch('changeCity', item.name) // 派发一个名字叫changeCity的action。然后吧item.name查 u 能过去。
+      this.$router.push('./')
     }
   }
 }
