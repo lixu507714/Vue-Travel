@@ -6,7 +6,7 @@
         <div class="button-list">
           <div class="button-wrapper">
             <div class="button">
-             {{this.$store.state.city}}
+             {{this.currentCity}}
             </div>
           </div>
         </div>
@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 import Bscroll from 'better-scroll'
 export default {
   name: 'cityList',
@@ -52,6 +53,11 @@ export default {
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  computed: {
+    ...mapState({
+      currentCity: 'city'
+    }) // 展开运算符
   },
   watch: {
     // 这时候用到贞听器，去监听changeCity的变化。
@@ -66,8 +72,10 @@ export default {
   methods: {
     handleCityClick (item) {
       this.$store.dispatch('changeCity', item.name) // 派发一个名字叫changeCity的action。然后吧item.name查 u 能过去。
+      // this.changeCity(item.name) // 与上边代码相同的含义 TODO 报错
       this.$router.push('./')
     }
+    // ...mapMutations(['changeCity'])
   }
 }
 </script>
