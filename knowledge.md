@@ -40,3 +40,6 @@ axios 返回的结果是一个promise对象
 
 better-scroll 使用字母的布局
 https://github.com/ustbhuangyi/better-scroll
+
+
+<keep-alive>是Vue的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染DOM。
