@@ -13,3 +13,6 @@ static/mock
 *.ntvs*
 *.njsproj
 *.sln
+
+# production
+/build
