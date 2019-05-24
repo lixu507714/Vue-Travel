@@ -18,7 +18,7 @@
 
 css
 stylus 快速编写css；
-在style 里面引用样式，需要蛀牙要用@import。
+在style 里面引用样式，需要注意要用@import。
 
 
 
@@ -43,3 +43,6 @@ https://github.com/ustbhuangyi/better-scroll
 
 
 <keep-alive>是Vue的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染DOM。
+
+
+yapi mock数据

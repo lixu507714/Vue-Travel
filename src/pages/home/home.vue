@@ -4,6 +4,7 @@
     <home-swiper></home-swiper>
     <home-icons></home-icons>
     <home-recommend></home-recommend>
+    <home-footer></home-footer>
   </div>
 </template>
 
@@ -14,9 +15,11 @@ import HomeIcons from './components/icons'
 import HomeRecommend from './components/recommend'
 import axios from 'axios'
 import { mapState } from 'vuex'
+import HomeFooter from './components/footer'
 export default {
   name: 'Home',
   components: {
+    HomeFooter,
     HomeRecommend,
     HomeSwiper,
     HomeHeader,

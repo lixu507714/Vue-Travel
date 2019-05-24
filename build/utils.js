@@ -64,7 +64,7 @@ exports.cssLoaders = function (options) {
       {
         loader: 'sass-resources-loader',
         options: {
-          resources: path.resolve(__dirname, '../src/assets/*/**.scss') //这里写自己的文件路径
+          resources: path.resolve(__dirname, '../src/assets/*/**.scss')
         }
       }),
     stylus: generateLoaders('stylus'),
